@@ -1,0 +1,15 @@
+class nsum1:
+    def __init__(self):
+        self.num = int(input("please enter number "))
+
+    def nsum(self):
+        sum = 0
+        for i in range(0, self.num+1):
+            sum = sum + i
+        return sum
+
+def main():
+    a = nsum1()
+    print(f"the sum of n is {a.nsum()}")
+
+main()
