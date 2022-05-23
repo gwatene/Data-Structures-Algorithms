@@ -1,0 +1,13 @@
+class TestMode:
+    def __init__(self):
+        self.list = [1,2,3,4,1,1,2,3]
+
+    def FindMode(self):
+        s = set(self.list)
+        return s
+
+def main():
+    a = TestMode()
+    print(a.FindMode())
+
+main()
