@@ -1,0 +1,20 @@
+class finddups:
+    def __init__(self):
+        self.list1 = [1,2,3,3,4,4,5,5,6,6]
+        self.list2 = []
+
+    def dupsfunc(self):
+        list3 =[]
+        for i in self.list1:
+            if i not in self.list2:
+                a = self.list2
+                a.append(i)
+            else:
+                list3.append(i)
+        return list3
+
+def main():
+    a = finddups()
+    print(a.dupsfunc())
+
+main()
