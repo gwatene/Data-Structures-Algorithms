@@ -1,0 +1,19 @@
+from statistics import multimode
+from collections import Counter
+
+class TestMode:
+    def __init__(self):
+        self.list = [1,2,3,3,3,3,3,4,4,5,5,4,4,4]
+
+    def mostc(self):
+        current_max = 0
+        current_val = None
+        counter = Counter(self.list)
+        print(counter.most_common(3))
+
+
+def main():
+    a = TestMode()
+    a.mostc()
+
+main()
