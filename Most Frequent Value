@@ -9,7 +9,7 @@ class TestMode:
         current_max = 0
         current_val = None
         counter = Counter(self.list)
-        print(counter.most_common(3))
+        print(counter.most_common(1)[0]) #this will get the first item in the tuple 
 
 
 def main():
