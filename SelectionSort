@@ -1,0 +1,48 @@
+class SelectionSort:
+    def __init__(self):
+        self.list = [64, 25, 12, 22, 11]
+
+    def Sortlist(self):
+       #set the range of the array
+        indexing_length = range(0, len(self.list))
+
+        #traverse through the unsorted array and set min value
+        for i in indexing_length:
+            min_value = i
+
+            #traverse throug the remaining array to check for the min value
+            for j in range(0+1, len(self.list)):
+                if self.list[j] < self.list[min_value]:
+                    min_value = j
+
+            #swap values
+            if min_value != 1:
+                self.list[min_value], self.list[i] = self.list[i], self.list[min_value]
+        return self.list
+
+
+
+
+
+def main():
+    a = SelectionSort()
+    print(a.Sortlist())
+
+main()
+
+#additional comments
+Complexity Analysis of Selection Sort:
+Time Complexity: The time complexity of Selection Sort is O(N2) as there are two nested loops:
+
+One loop to select an element of Array one by one = O(N)
+Another loop to compare that element with every other Array element = O(N)
+Therefore overall complexity = O(N)*O(N) = O(N*N) = O(N2)
+
+Auxiliary Space: O(1) as the only extra memory used is for temporary variable while swapping two values in Array. The good thing about selection sort is it never makes more than O(n) swaps and can be useful when memory write is a costly operation. 
+
+Sort an array of strings using Selection Sort
+Is Selection Sort Algorithm stable?
+Stability : The default implementation is not stable. However it can be made stable. Please see stable selection sort for details.
+
+Is Selection Sort Algorithm in-place?
+Yes, it does not require extra space.
