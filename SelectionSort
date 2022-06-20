@@ -2,21 +2,21 @@ class SelectionSort:
     def __init__(self):
         self.list = [64, 25, 12, 22, 11]
 
-    def Sortlist(self):
+    def SortList(self):
        #set the range of the array
-        indexing_length = range(0, len(self.list))
+        indexing_length = range(0, len(self.list)-1)
 
         #traverse through the unsorted array and set min value
         for i in indexing_length:
             min_value = i
 
             #traverse throug the remaining array to check for the min value
-            for j in range(0+1, len(self.list)):
+            for j in range(i+1, len(self.list)):
                 if self.list[j] < self.list[min_value]:
                     min_value = j
 
             #swap values
-            if min_value != 1:
+            if min_value != i:
                 self.list[min_value], self.list[i] = self.list[i], self.list[min_value]
         return self.list
 
