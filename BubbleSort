@@ -1,0 +1,22 @@
+class BubbleSort:
+    def __init__(self):
+        self.list = [64, 25, 12, 22, 11,9]
+
+    def SortList(self):
+        sorted = False
+        indexing_length = range(0, len(self.list)-1)
+        while not sorted:
+            sorted = True
+            for j in indexing_length:
+                if self.list[j] > self.list[j+1]:
+                    sorted = False
+                    self.list[j] , self.list[j+1] = self.list[j+1], self.list[j]
+
+        return self.list
+
+
+def main():
+    a = BubbleSort()
+    print(a.SortList())
+
+main()
