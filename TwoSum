@@ -1,0 +1,29 @@
+class TwoSum:
+    def __init__(self):
+        self.list= [2,11,15,7]
+        self.result = 9
+
+    def BFSum(self, sum = 0): #bruteforce n(o)2
+        for i in range(len(self.list)):
+            for j in range(len(self.list)):
+                sum = self.list[i] + self.list[j]
+                if sum == self.result:
+                    return i, j
+
+    def ESum(self): #enhanced n(o) since there is only one for looop
+        dataMap = dict()
+        for i in range(len(self.list)):
+             #in the firat iteration 2 will be the result
+            num = self.list[i]
+            complement = self.result - num # 7
+            if num in dataMap:
+                return [dataMap[num], i ]# [dataMap[complement], i ]
+            else:
+                 dataMap[complement] = i
+
+def main():
+    a = TwoSum()
+    print(a.ESum())
+    # print(a.BFSum())
+
+if __name__ == "__main__": main()
