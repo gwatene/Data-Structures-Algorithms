@@ -1,0 +1,16 @@
+class Pali:
+    def __init__(self):
+        self.string = input("please enter string: ")
+
+    def check_val(self):
+        new_v = self.string[::-1]
+        if new_v != self.string:
+            return (f"string is not a palindrome")
+        else:
+            return (f"{self.string} is equal to {new_v} which is a palindrome")
+
+def main():
+    a = Pali()
+    print(a.check_val())
+
+if __name__ == "__main__": main()
